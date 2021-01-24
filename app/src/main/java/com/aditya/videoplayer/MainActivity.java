@@ -48,7 +48,9 @@ public class MainActivity extends AppCompatActivity {
     private EditText urlEditText;
     private Button playBtn;
 
-    public static final String URL = "https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&key=AIzaSyDgilcbQ-4p3ZzIyCHoluFY60sTULuvOW0";
+
+    //Removing Api Key,use when it is required
+    public static final String URL = "https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&key=";
     String videoURL = "https://media.geeksforgeeks.org/wp-content/uploads/20201217163353/Screenrecorder-2020-12-17-16-32-03-350.mp4";
 
     SimpleExoPlayerView simpleExoPlayerView;
