@@ -1,0 +1,159 @@
+{
+  "project_info": {
+    "project_number": "946256914949",
+    "firebase_url": "https://myfirebase-a931e.firebaseio.com",
+    "project_id": "myfirebase-a931e",
+    "storage_bucket": "myfirebase-a931e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:946256914949:android:8bd1530598117a0fa48a6c",
+        "android_client_info": {
+          "package_name": "com.aditya.videoplayer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "946256914949-p0vo11kn7ihj072epmt215ookeg9pkmj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aditya.videoplayer",
+            "certificate_hash": "1337682b7b3923bbcd0663ea2845276da441e219"
+          }
+        },
+        {
+          "client_id": "946256914949-gou892v480nnb0dl2i7osr9igs7hc6hm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAaHvjM7TZtx-a1mArfnfPxXEcr6oY_TNM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "946256914949-gou892v480nnb0dl2i7osr9igs7hc6hm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:946256914949:android:0c3cf126ecc66e76a48a6c",
+        "android_client_info": {
+          "package_name": "com.example.blogapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "946256914949-n89nl1po84bsbafrl4kqbu33tqbdfpcp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.blogapp",
+            "certificate_hash": "1337682b7b3923bbcd0663ea2845276da441e219"
+          }
+        },
+        {
+          "client_id": "946256914949-gou892v480nnb0dl2i7osr9igs7hc6hm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAaHvjM7TZtx-a1mArfnfPxXEcr6oY_TNM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "946256914949-gou892v480nnb0dl2i7osr9igs7hc6hm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:946256914949:android:0985489053984397a48a6c",
+        "android_client_info": {
+          "package_name": "com.example.fireintro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "946256914949-mtog9l8sbk89citsnko0pi3henkqlgtd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fireintro",
+            "certificate_hash": "1337682b7b3923bbcd0663ea2845276da441e219"
+          }
+        },
+        {
+          "client_id": "946256914949-gou892v480nnb0dl2i7osr9igs7hc6hm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAaHvjM7TZtx-a1mArfnfPxXEcr6oY_TNM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "946256914949-gou892v480nnb0dl2i7osr9igs7hc6hm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:946256914949:android:66cbf11e5abe6892a48a6c",
+        "android_client_info": {
+          "package_name": "com.example.videomeeting"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "946256914949-f92a3p2dg0jqte5p0cqla3a6m0m9ile1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.videomeeting",
+            "certificate_hash": "1337682b7b3923bbcd0663ea2845276da441e219"
+          }
+        },
+        {
+          "client_id": "946256914949-gou892v480nnb0dl2i7osr9igs7hc6hm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAaHvjM7TZtx-a1mArfnfPxXEcr6oY_TNM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "946256914949-gou892v480nnb0dl2i7osr9igs7hc6hm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
