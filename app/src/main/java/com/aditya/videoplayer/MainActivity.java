@@ -1,13 +1,17 @@
 package com.aditya.videoplayer;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -35,6 +39,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -50,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     //Removing Api Key,use when it is required
-    public static final String URL = "https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&key=";
+    public static final String URL = "https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&key=AIzaSyDgilcbQ-4p3ZzIyCHoluFY60sTULuvOW0";
     String videoURL = "https://media.geeksforgeeks.org/wp-content/uploads/20201217163353/Screenrecorder-2020-12-17-16-32-03-350.mp4";
 
     SimpleExoPlayerView simpleExoPlayerView;
@@ -79,6 +84,17 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String urlFromEdittext = urlEditText.getText().toString();
                 playVideofrmUrl(urlFromEdittext);
+            }
+        });
+
+        //This Method is to change the Input Action Button Functionality,we have to edit in xml code also.
+        urlEditText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if(EditorInfo.IME_ACTION_SEARCH==actionId){
+                    Toast.makeText(MainActivity.this, "Searching....", Toast.LENGTH_SHORT).show();
+                }
+                return false;
             }
         });
     }
@@ -121,6 +137,25 @@ public class MainActivity extends AppCompatActivity {
         videoRecyclerViewAdapter = new VideoRecyclerViewAdapter(videoList,this);
         recyclerView.setAdapter(videoRecyclerViewAdapter);
         videoRecyclerViewAdapter.notifyDataSetChanged();
+
+        //This is new feature in which we can swipe or drag and drop in recyclerview
+        ItemTouchHelper helper = new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(ItemTouchHelper.LEFT|ItemTouchHelper.RIGHT|ItemTouchHelper.UP|ItemTouchHelper.DOWN,ItemTouchHelper.LEFT|ItemTouchHelper.RIGHT) {
+            @Override
+            public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
+                int from = viewHolder.getAdapterPosition();
+                int to = target.getAdapterPosition();
+                Collections.swap(videoList,from,to);
+                videoRecyclerViewAdapter.notifyItemMoved(from,to);
+                return true;
+            }
+
+            @Override
+            public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
+                videoList.remove(viewHolder.getAdapterPosition());
+                videoRecyclerViewAdapter.notifyItemRemoved(viewHolder.getAdapterPosition());
+            }
+        });
+        helper.attachToRecyclerView(recyclerView);
 
     }
     public void playVideo(){
